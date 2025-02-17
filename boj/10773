@@ -6,7 +6,7 @@ nums = []
 for i in range(k):
     n = int(input())
     if n == 0:
-        nums.remove(nums[-1])
+        nums.pop()
     else:
         nums.append(n)
         
