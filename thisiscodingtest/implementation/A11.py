@@ -33,6 +33,7 @@ def simulate():
     time = 0
     index = 0
     q = [(x, y)]
+    
     while True:
         nx = x + dx[direction]
         ny = y + dy[direction]
@@ -49,11 +50,14 @@ def simulate():
         else:
             time += 1
             break
+            
         x, y = nx, ny
         time += 1
+        
         if index < len(info) and time == info[index][0]:
             direction = turn(direction, info[index][1])
             index += 1
+            
     return time
 
 print(simulate())
