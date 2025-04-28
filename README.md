@@ -1,4 +1,8 @@
 # Algorithms
+## 기타
+- 입력 클 때
+    - import sys
+    - input = sys.stdin.readline
 ## 그리디
 ## 구현
 - "최소", "최대" -> 완전 탐색
