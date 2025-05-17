@@ -3,6 +3,7 @@
 - 입력 클 때
     - import sys
     - input = sys.stdin.readline
+- set(): add, update, remove
 ## 그리디
 ## 구현
 - "최소", "최대" -> 완전 탐색
