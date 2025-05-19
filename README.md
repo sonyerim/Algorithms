@@ -4,8 +4,6 @@
     - import sys
     - input = sys.stdin.readline
 - set(): add, update, remove
-- graph = [[] for _ in range(n + 1)] -> graph = [[], [], [], ... , []]
-- graph = [[] * (n + 1)] -> graph = [[]]
 
 ## 그리디
 ## 구현
@@ -17,6 +15,8 @@
 - DFS
 - BFS: 최단 경로
     - from collections import deque
+- graph = [[] for _ in range(n + 1)] -> graph = [[], [], [], ... , []]
+- graph = [[] * (n + 1)] -> graph = [[]]
 ## 정렬
 ## 이진 탐색
 ## 다이나믹 프로그래밍
