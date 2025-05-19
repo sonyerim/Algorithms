@@ -4,6 +4,9 @@
     - import sys
     - input = sys.stdin.readline
 - set(): add, update, remove
+- graph = [[] for _ in range(n + 1)] -> graph = [[], [], [], ... , []]
+- graph = [[] * (n + 1)] -> graph = [[]]
+
 ## 그리디
 ## 구현
 - "최소", "최대" -> 완전 탐색
