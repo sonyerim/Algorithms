@@ -32,3 +32,12 @@ def bfs(l, start_x, start_y, target_x, target_y):
 
         move_count += 1  # 한 층 끝나면 거리 증가
 
+t = int(input())
+
+for _ in range(t):
+    l = int(input())
+    x, y = map(int, input().split())
+    n, m = map(int, input().split())
+    
+    bfs(l, x, y, n, m)
+
