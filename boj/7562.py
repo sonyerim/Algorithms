@@ -36,6 +36,45 @@ for _ in range(t):
     n, m = map(int, input().split())
     print(bfs(l, x, y, n, m))
 
+# ------------------------------------------------------------
+
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+dx = [1, -1, 1, -1, 2, -2, 2, -2]
+dy = [2, -2, -2, 2, 1, -1, -1, 1]
+
+def bfs(x, y):
+    queue = deque()
+    queue.append((x, y))
+    graph[x][y] += 1
+    
+    while queue:
+        x, y = queue.popleft()
+        
+        if x == n and y == m:
+            return graph[x][y]
+        
+        for i in range(8):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            
+            if nx >= 0 and nx < l and ny >= 0 and ny < l and graph[nx][ny] == -1:
+                queue.append((nx, ny))
+                graph[nx][ny] = graph[x][y] + 1
+
+t = int(input())
+
+for _ in range(t):
+    l = int(input())
+    x, y = map(int, input().split())
+    n, m = map(int, input().split())
+    graph = [[-1] * l for _ in range(l)]
+    
+    print(bfs(x, y))
+    
+
 
 
 
