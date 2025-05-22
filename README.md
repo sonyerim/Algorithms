@@ -4,6 +4,11 @@
     - import sys
     - input = sys.stdin.readline
 - set(): add, update, remove
+- list 복사
+    - `answer = temp`: 참조 복사 / 동일한 객체 가리킴 / 서로 영향 줌
+    - `answer = temp[:]`: 얕은 복사 / 새 리스트 생성 / 독립적으로 동작
+    - `copy.deepcopy(temp)`: 깊은 복사 / 모든 계층 복사 / 완전히 독립적
+
 
 ## 그리디
 ## 구현
