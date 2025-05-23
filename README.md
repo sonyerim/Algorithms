@@ -10,6 +10,10 @@
     - `copy.deepcopy(temp)`: 깊은 복사 / 모든 계층 복사 / 완전히 독립적
 - 해시
     - `from collections import defaultdict`
+    - `d = defaultdict(default_factory)`
+        - `int` → 0
+        - `list` → `[]`
+        - `str` → `''`
 
 ## 그리디
 ## 구현
