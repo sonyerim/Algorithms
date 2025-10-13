@@ -1,6 +1,6 @@
 # 10870번: 피보나치 수 5
-
 # DFS
+
 def fibo(x):
     if x == 0:
         return 0
