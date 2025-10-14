@@ -8,7 +8,8 @@ def dfs(num_list, cnt):
         if cnt == exchange:
             max_num = max(max_num, int("".join(num_list)))
             return
-        
+
+        # 백트래킹
         state = (int("".join(num_list)), cnt)
         if state in visited:
             return
