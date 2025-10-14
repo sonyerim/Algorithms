@@ -1,6 +1,6 @@
 # 1244. [S/W 문제해결 응용] 2일차 - 최대 상금
 # 완전탐색
-# DFS
+# DFS, 백트래킹
 
 def dfs(num_list, cnt):
         global max_num, visited
