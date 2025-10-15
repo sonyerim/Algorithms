@@ -11,14 +11,14 @@ for test_case in range(1, T + 1):
     cnt = 0
     
     while True:
+        if x > N or y > N:
+            break
+            
         if x < y:
             x += y
         else:
             y += x
             
         cnt +=1
-        
-        if x > N or y > N:
-            break
         
     print(cnt)
