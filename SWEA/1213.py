@@ -17,3 +17,17 @@ for _ in range(1, 11):
                 answer += 1
 
     print(f"#{T} {answer}")
+
+# 슬라이싱
+for _ in range(1, 11):
+    T = int(input())
+    target = input().strip()     # 혹시 모를 공백 제거
+    sentence = input().strip()
+    
+    answer = 0
+    
+    for i in range(len(sentence) - len(target) + 1):  # 필요한 부분까지만 탐색
+        if sentence[i:i+len(target)] == target:
+            answer += 1
+
+    print(f"#{T} {answer}")
