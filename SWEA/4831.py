@@ -11,7 +11,7 @@ for C in range(1, T + 1):
     K, N, M = map(int, input().split())
     
     # 충전기가 설치된 정류장
-    stops = list(map(int, input().split()))
+    stops = set(map(int, input().split()))
     
     current = 0
     charged = 0
