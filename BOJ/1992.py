@@ -16,5 +16,4 @@ def compress(x, y, size):
 
     return first
 
-
 print(compress(0, 0, N))
