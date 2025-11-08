@@ -27,11 +27,11 @@ for _ in range(10):
     
     for i in range(100):
         for j in range(100):
-            for n in range(100-j, -1, -1):
+            for n in range(100-j, max_length, -1):
                 if is_palindrome_x(i, j, n):
                     max_length = max(max_length, n)
                     break
-            for n in range(100-i, -1, -1):
+            for n in range(100-i, max_length, -1):
                 if is_palindrome_y(i, j, n):
                     max_length = max(max_length, n)
                     break
