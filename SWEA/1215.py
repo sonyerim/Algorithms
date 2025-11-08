@@ -21,7 +21,7 @@ def is_palindrome_y(x, y, N):
             return True
     return False
 
-for test_case in range(1, 2):
+for test_case in range(1, 11):
     
     N = int(input())
     words = [input().strip() for _ in range(8)]
