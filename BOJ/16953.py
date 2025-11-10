@@ -1,5 +1,6 @@
 # 16953번: A -> B
 
+# 그리디 ------------------------------
 A, B = map(int, input().split())
 
 count = 1
@@ -19,25 +20,53 @@ while B != A:
 
 print(count)
 
-# answer = []
+# BFS ------------------------------
+from collections import deque
 
-# def dfs(A, count):
-#     global answer, B
+A, B = map(int, input().split())
+
+q = deque()
+q.append((A, 1))
+
+answer = -1
+
+while q:
+    current, count = q.popleft()
     
-#     if A == B:
-#         answer.append(count)
-#         return
-#     elif A > B:
-#         return
-#     else:
-#         dfs(A * 2, count + 1)
-#         dfs(int(str(A)+"1"), count + 1)
+    if current == B:
+        answer = count
+        break
+    
+    if current > B:
+        continue
+    
+    q.append((current * 2, count + 1))
+    q.append((current * 10 + 1, count + 1))
+    
+print(answer)
 
-# count = 1
-# dfs(A * 2, count)
-# dfs(int(str(A)+"1"), count)
+# DFS ------------------------------
+A, B = map(int, input().split())
 
-# if len(answer) == 0:
-#     print(-1)
-# else:
-#     print(min(answer) + 1)
+answer = []
+
+def dfs(A, count):
+    global answer, B
+    
+    if A == B:
+        answer.append(count)
+        return
+    elif A > B:
+        return
+    else:
+        dfs(A * 2, count + 1)
+        dfs(A * 10 + 1, count + 1)
+
+count = 1
+dfs(A * 2, count)
+dfs(A * 10 + 1, count)
+
+if len(answer) == 0:
+    print(-1)
+else:
+    print(min(answer) + 1)
