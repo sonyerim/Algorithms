@@ -1,6 +1,6 @@
 # 16953번: A -> B
 
-# 그리디 ------------------------------
+# 그리디 ----------------------------------------
 A, B = map(int, input().split())
 
 count = 1
@@ -20,7 +20,7 @@ while B != A:
 
 print(count)
 
-# BFS ------------------------------
+# BFS ----------------------------------------
 from collections import deque
 
 A, B = map(int, input().split())
@@ -45,7 +45,7 @@ while q:
     
 print(answer)
 
-# DFS ------------------------------
+# DFS ----------------------------------------
 A, B = map(int, input().split())
 
 answer = []
