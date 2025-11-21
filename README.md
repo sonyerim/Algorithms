@@ -15,6 +15,10 @@
         - `list` → `[]`
         - `str` → `''`
         - `.values()` / `.keys()`
+- 언패킹
+    - `print(answer)`: 리스트 자체 출력
+    - `print(*answer)`: 리스트 안의 요소만 공백으로 출력
+    - `print(*answer, sep=", ")`
 
 ## 그리디
 ## 구현
