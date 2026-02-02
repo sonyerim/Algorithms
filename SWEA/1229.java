@@ -24,26 +24,20 @@ class Solution {
 				String cmd = st.nextToken();
 
 				if (cmd.equals("I")) {
-					int ix = Integer.parseInt(st.nextToken());
-					int iy = Integer.parseInt(st.nextToken());
+					int x = Integer.parseInt(st.nextToken());
+					int y = Integer.parseInt(st.nextToken());
 
-					String[] s = new String[iy];
-					for (int k = 0; k < iy; k++) {
-						s[k] = st.nextToken();
-					}
-					for (int j = ix; j < ix + iy; j++) {
-						password.add(j, s[j - ix]);
-					}
+					for (int j = 0; j < y; j++)
+						password.add(x + j, st.nextToken());
 
 				}
 
-				if (cmd.equals("D")) {
-					int dx = Integer.parseInt(st.nextToken());
-					int dy = Integer.parseInt(st.nextToken());
+				else if (cmd.equals("D")) {
+					int x = Integer.parseInt(st.nextToken());
+					int y = Integer.parseInt(st.nextToken());
 
-					for (int l = 0; l < dy; l++) {
-						password.remove(dx);
-					}
+					for (int j = 0; j < y; j++)
+						password.remove(x);
 
 				}
 			}
