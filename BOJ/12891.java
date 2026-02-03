@@ -16,10 +16,10 @@ public class Main {
 		String dna = br.readLine();
 
 		st = new StringTokenizer(br.readLine());
-		int[] need = new int[4];
-		for (int i = 0; i < 4; i++) {
-			need[i] = Integer.parseInt(st.nextToken());
-		}
+		int ca = Integer.parseInt(st.nextToken());
+		int cc = Integer.parseInt(st.nextToken());
+		int cg = Integer.parseInt(st.nextToken());
+		int ct = Integer.parseInt(st.nextToken());
 
 		int[] count = new int[4];
 
