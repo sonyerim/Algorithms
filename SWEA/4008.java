@@ -16,7 +16,6 @@ class Solution {
 		for (int i = 0; i < 4; i++) {
 			if (operator[i] > 0) {
 				operator[i]--;
-				int prev = value;
 
 				if (i == 0) {
 					value += operand[depth + 1];
@@ -28,8 +27,7 @@ class Solution {
 					value /= operand[depth + 1];
 				}
 				dfs(depth + 1, value);
-
-				value = prev;
+				
 				operator[i]++;
 			}
 		}
