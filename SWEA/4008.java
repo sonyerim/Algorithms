@@ -14,23 +14,23 @@ class Solution {
 		}
 
 		for (int i = 0; i < 4; i++) {
-			if (operator[i] > 0) {
-				operator[i]--;
-
-				if (i == 0) {
-					value += operand[depth + 1];
-				} else if (i == 1) {
-					value -= operand[depth + 1];
-				} else if (i == 2) {
-					value *= operand[depth + 1];
-				} else if (i == 3) {
-					value /= operand[depth + 1];
-				}
-				dfs(depth + 1, value);
-				
-				operator[i]++;
-			}
+		    if (operator[i] > 0) {
+		        operator[i]--;
+		
+		        int next = value;
+		        int num = operand[depth + 1];
+		
+		        if (i == 0) next += num;
+		        else if (i == 1) next -= num;
+		        else if (i == 2) next *= num;
+		        else next /= num;
+		
+		        dfs(depth + 1, next);
+		
+		        operator[i]++;
+		    }
 		}
+
 	}
 
 	public static void main(String args[]) throws Exception {
