@@ -3,7 +3,7 @@ import java.util.*;
 
 class Solution {
 
-	static int N, K, maxHeight, minHeight, maxLen, ex, ey;
+	static int N, K, maxHeight, minHeight, maxLen;
 	static int[][] map;
 	static boolean[][] visited;
 	static int[] dx = {-1, 1, 0, 0};
@@ -72,7 +72,6 @@ class Solution {
 				for (int j = 0; j < N; j++) {
 					map[i][j] = Integer.parseInt(st.nextToken());
 					maxHeight = Math.max(maxHeight, map[i][j]);
-					minHeight = Math.min(minHeight, map[i][j]);
 				}
 			}
 			
@@ -80,9 +79,6 @@ class Solution {
 				for (int j = 0; j < N; j++) {
 					if (map[i][j] == maxHeight) { // 시작 좌표들
 						start.add(new int[] {i, j});
-					} else if (map[i][j] == minHeight) { // 도착 좌표
-						ex = i;
-						ey = j;
 					}
 				}
 			}
