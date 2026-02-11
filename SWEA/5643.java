@@ -4,7 +4,6 @@ import java.util.*;
 class Solution {
 
 	static int N, M, downCnt, upCnt, answer;
-	static int[][] map;
 	static List<Integer>[] downList, upList;
 	static boolean[] visited;
 	
