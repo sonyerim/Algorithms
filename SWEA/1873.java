@@ -3,9 +3,8 @@ import java.util.*;
 
 class Solution {
 
-	static int H, W, N, sx, sy, dir, answer;
+	static int H, W, N, sx, sy, dir;
 	static char[][] map;
-	static boolean[] visited;
 	static int[] dx = {-1, 1, 0, 0};
 	static int[] dy = {0, 0, -1, 1};
 	
@@ -83,7 +82,6 @@ class Solution {
 			else if (dir == 2) map[sx][sy] = '<';
 			else if (dir == 3) map[sx][sy] = '>';
 			
-			// 출력: 맵
 			sb.append("#").append(tc).append(" ");
 			for (int i = 0; i < H; i++) {
 				for (int j = 0; j < W; j++) {
